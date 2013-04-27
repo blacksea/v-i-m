@@ -68,7 +68,9 @@ set smarttab
 imap jj <Esc>
 map <C-;> <<
 map <C-'> >>
-colorscheme BCSB
+colors BCSB
+nmap ! :colors BCSB<cr>
+nmap @ :colors peaksea<cr>:colors peaksea<cr>
 execute pathogen#infect()
 set encoding=utf-8
 map <C-j> <C-w>h<C-w> 
@@ -83,4 +85,4 @@ let g:syntastic_enable_signs=0
 let g:syntastic_check_on_open=1
 let g:nrrw_rgn_vert = 1
 let g:nrrw_rgn_wdth = 120
-
+hi folded ctermbg = 0
