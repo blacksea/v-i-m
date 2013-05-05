@@ -66,8 +66,6 @@ set splitbelow
 set splitright
 set smarttab
 imap jj <Esc>
-map <C-;> <<
-map <C-'> >>
 colors BCSB
 nmap ! :colors BCSB<cr>
 nmap @ :colors peaksea<cr>:colors peaksea<cr>
@@ -77,6 +75,10 @@ map <C-j> <C-w>h<C-w>
 map <C-k> <C-w>l<C-w>
 map <C-t> :NERDTreeToggle<CR>
 nmap <CR> G
+nmap \ :bn<CR>
+nmap <C-\> :bp<CR>
+nmap ' :res -1<CR>
+nmap " :res +1<CR>
 let g:syntastic_enable_balloons = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
