@@ -1,4 +1,5 @@
 set nocompatible  " disable vi compatibility.
+
 set history=256  " Number of things to remember in history.
 set autowrite  " Writes on make/shell commands
 set autoread  
