@@ -1,5 +1,4 @@
 set nocompatible  " disable vi compatibility.
-
 set history=256  " Number of things to remember in history.
 set autowrite  " Writes on make/shell commands
 set autoread  
@@ -76,16 +75,13 @@ map <C-j> <C-w>h<C-w>
 map <C-k> <C-w>l<C-w>
 map <C-t> :NERDTreeToggle<CR>
 nmap <CR> G
+nmap <Tab> :Gwrite<CR>
+nmap <C-@> :Git push ghub master<CR>
+nmap <Tab><Tab> :Gcommit -m '
 nmap \ :bn<CR>
 nmap <C-\> :bp<CR>
 nmap ' :res -1<CR>
 nmap " :res +1<CR>
-let g:syntastic_enable_balloons = 1
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_enable_signs=0
-let g:syntastic_check_on_open=1
 let g:nrrw_rgn_vert = 1
 let g:nrrw_rgn_wdth = 120
 hi folded ctermbg = 0
