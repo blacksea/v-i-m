@@ -21,7 +21,7 @@ set hlsearch    " highlight search
 set ignorecase  " Do case in sensitive matching with
 set smartcase		" be sensitive when there's a capital letter
 set incsearch   "
-set nowrap
+set wrap
 set textwidth=0                " Don't wrap lines by default
 
 set tabstop=2                  " tab size eql 2 spaces
@@ -67,17 +67,16 @@ set splitright
 set smarttab
 imap jj <Esc>
 colors BCSB
-nmap ! :colors BCSB<cr>
-nmap @ :colors peaksea<cr>:colors peaksea<cr>
+nmap ! :Gwrite<CR>
+nmap @ :Gcommit -m '
 execute pathogen#infect()
 set encoding=utf-8
 map <C-j> <C-w>h<C-w> 
 map <C-k> <C-w>l<C-w>
-map <C-t> :NERDTreeToggle<CR>
+map <Tab> :NERDTreeToggle<CR>
 nmap <CR> G
-nmap <Tab> :Gwrite<CR>
+nmap <Tab><Tab> :w<CR>
 nmap <C-@> :Git push ghub master<CR>
-nmap <Tab><Tab> :Gcommit -m '
 nmap \ :bn<CR>
 nmap <C-\> :bp<CR>
 nmap ' :res -1<CR>
@@ -85,3 +84,8 @@ nmap " :res +1<CR>
 let g:nrrw_rgn_vert = 1
 let g:nrrw_rgn_wdth = 120
 hi folded ctermbg = 0
+
+let g:airline_powerline_fonts = 1 " POWERLINE SYMBOLS
+let g:airline_theme = 'powerlineish' 
+let g:airline#extensions#whitespace#enabled = 0
+let g:nrrw_rgn_hl = 'Visual'
