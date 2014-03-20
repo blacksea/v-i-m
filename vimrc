@@ -1,3 +1,14 @@
+" colors
+
+let g:airline_powerline_fonts = 1 
+let g:airline_theme = 'powerlineish' 
+let g:airline#extensions#whitespace#enabled = 0
+syntax on 
+colors BCSB " https://github.com/spacekat/Baby-The-Code-Shines-Bright
+
+
+" copy pasted quickstart
+
 set nocompatible  " disable vi compatibility.
 set history=256  " Number of things to remember in history.
 set autowrite  " Writes on make/shell commands
@@ -42,7 +53,6 @@ set cinoptions=:s,ps,ts,cs
 set cinwords=if,else,while,do
 set cinwords+=for,switch,case
 
-syntax on               " enable syntax
 filetype plugin indent on             " Automatically detect file types.
 
 set showmatch  " Show matching brackets.
@@ -65,8 +75,11 @@ set mousehide  " Hide mouse after chars typed
 set splitbelow
 set splitright
 set smarttab
+
+
+" crud
+
 imap jj <Esc>
-colors BCSB
 nmap ! :Gwrite<CR>
 nmap @ :Gcommit -m '
 execute pathogen#infect()
@@ -81,11 +94,7 @@ nmap \ :bn<CR>
 nmap <C-\> :bp<CR>
 nmap ' :res -1<CR>
 nmap " :res +1<CR>
+hi folded ctermbg = 0
 let g:nrrw_rgn_vert = 1
 let g:nrrw_rgn_wdth = 120
-hi folded ctermbg = 0
-
-let g:airline_powerline_fonts = 1 " POWERLINE SYMBOLS
-let g:airline_theme = 'powerlineish' 
-let g:airline#extensions#whitespace#enabled = 0
 let g:nrrw_rgn_hl = 'Visual'
