@@ -1,12 +1,3 @@
-" colors
-
-let g:airline_powerline_fonts = 1 
-let g:airline_theme = 'powerlineish' 
-let g:airline#extensions#whitespace#enabled = 0
-syntax on 
-colors BCSB " https://github.com/spacekat/Baby-The-Code-Shines-Bright
-
-
 " copy pasted quickstart
 
 set nocompatible  " disable vi compatibility.
@@ -98,3 +89,12 @@ hi folded ctermbg = 0
 let g:nrrw_rgn_vert = 1
 let g:nrrw_rgn_wdth = 120
 let g:nrrw_rgn_hl = 'Visual'
+
+
+" colors
+
+let g:airline_powerline_fonts = 1 
+let g:airline_theme = 'powerlineish' 
+let g:airline#extensions#whitespace#enabled = 0
+syntax on 
+colors BCSB " https://github.com/spacekat/Baby-The-Code-Shines-Bright
